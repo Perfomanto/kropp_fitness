@@ -317,6 +317,7 @@ h6 {
 .title-medium {
     font-size: clamp(20px, 2.08vw, 40px);
     line-height: 1.3;
+    color: var(--color-light);
 }
 
 .backdrop-title {
@@ -576,6 +577,12 @@ h6 {
     gap: 60px;
 }
 
+.training-types-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .training-types-item {
     --trainingTypesItemBgIconSize: 80px;
     display: flex;
@@ -589,7 +596,17 @@ h6 {
 .training-types-item-title {
     font-size: 16px;
 }
+@media (max-width: 1919px) {
+    .motivation-card-image {
+        margin-block: -20px;
 
+    }
+}
+@media (max-width: 1280px) {
+    .training-types-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 @media (max-width: 1024px) {
     .header {
@@ -656,5 +673,16 @@ h6 {
     }
     .motivation-card-title:not(:last-child) {
         margin-bottom: 20px;
+    }
+    .training-types-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    .training-types-item {
+        --trainingTypesItemBgIconSize: 50px;
+        row-gap: 10px;
+    }
+    .training-types-image {
+        max-width: 120px;
     }
 }
